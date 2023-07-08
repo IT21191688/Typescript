@@ -270,3 +270,35 @@ executor(new Cheeta());
 function execute(vehicle) {
     vehicle;
 }
+function trigger(v) {
+    if (v.name == 'myBus') {
+        console.log('Bus');
+    }
+    else {
+        console.log('Bike');
+    }
+}
+const myBike = {
+    name: 'myBike',
+    height: 5,
+};
+trigger(myBike);
+const stName = 'name';
+const stAge = 'age';
+const stActive = 'isActive';
+console.log(stName);
+const stuName = "Saman Kumara";
+const john = {
+    name: 'John',
+    age: 25,
+};
+console.log(john.name);
+console.log(john.age);
+const employee = {
+    id: 1,
+    name: 'Alice',
+    department: 'HR',
+};
+console.log(employee.id);
+console.log(employee.name);
+console.log(employee.department);

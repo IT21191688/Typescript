@@ -716,7 +716,108 @@ function execute(vehicle: Vehicle):void{
 
 
 
+//union
 
+interface Vehi{
+    name:string;
+}
+
+interface Bus extends Vehi{
+
+    height:number
+}
+
+interface Bike extends Vehi{
+
+    height:number
+
+}
+
+
+type MyVehicle=Bus | Bike;
+
+function trigger(v:MyVehicle){
+
+    if(v.name=='myBus'){
+        console.log('Bus')
+
+    }else{
+        console.log('Bike')
+    }
+}
+
+
+const myBike: Bike = {
+  name: 'myBike',
+  height: 5,
+};
+
+trigger(myBike); // Output: Bike
+
+
+
+//key Of && Type Of
+
+
+
+interface St{
+
+    name:string;
+    age:number;
+    isActive:boolean;
+
+}
+
+type StKeys=keyof St;
+
+const stName:StKeys='name'
+const stAge:StKeys='age'
+const stActive:StKeys='isActive'
+
+
+console.log(stName)
+
+
+
+//Type Of
+
+const stuName="Saman Kumara"
+
+type NameData=typeof stuName //String
+
+
+
+//type Aliases and type literals
+
+
+// Type Alias
+type Person = {
+  name: string;
+  age: number;
+};
+
+const john: Person = {
+  name: 'John',
+  age: 25,
+};
+
+console.log(john.name); // Output: John
+console.log(john.age); // Output: 25
+
+// Type Literal
+const employee: {
+  id: number;
+  name: string;
+  department: string;
+} = {
+  id: 1,
+  name: 'Alice',
+  department: 'HR',
+};
+
+console.log(employee.id); // Output: 1
+console.log(employee.name); // Output: Alice
+console.log(employee.department); // Output: HR
 
 
 
